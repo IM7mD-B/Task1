@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeScreen from "./src/screen/HomeScreen.jsx";
 import BookScreen from "./src/screen/BookScreen.jsx";
+import BookFujiScreen from "./src/screen/BookFujiScreen.jsx";
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
       >
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="Book" component={BookScreen}/>
+        <Stack.Screen name="BookFuji" component={BookFujiScreen}/>
       </Stack.Navigator>
       
     </NavigationContainer>

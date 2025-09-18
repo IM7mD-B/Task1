@@ -66,7 +66,7 @@ const BookScreen = ({ navigation }) => {
         <Text style={[styles.overview, { fontWeight: "bold", color: "#a5a5a5c8" }]}>remarkable diversity in terms of topography</Text>
         <Text style={[styles.overview, { fontWeight: "bold", color: "#a5a5a593" }]}>and climate. It features towering peaks, active</Text>
         <Text style={[styles.overview, { fontWeight: "bold", color: "#a5a5a552" }]}>volcanoes, deep canyons, expansive plateaus,</Text>
-        <Text style={[styles.overview, { fontWeight: "bold", color: "#a5a5a505" }]}>and lush valleys. The Andes are also home to </Text>
+        <Text style={[styles.overview, { fontWeight: "bold", color: "#a5a5a511" }]}>and lush valleys. The Andes are also home to </Text>
       </View>
       <View style={styles.box1Con}>
         <Text style={styles.MVText}> Book Now </Text>
@@ -92,8 +92,8 @@ const styles = StyleSheet.create({
   },
   imageIconCon: {
     position: 'absolute', // مهم: ثابت بالنسبة للصورة
-    top: 15,              // 10 بكسل من أعلى الصورة
-    right: 15,            // 10 بكسل من يمين الصورة
+    top: 15,              // 15 بكسل من أعلى الصورة
+    right: 15,            // 15 بكسل من يمين الصورة
     padding: 10,
     borderRadius: 25,
     backgroundColor: 'rgba(29,29,29,0.4)',

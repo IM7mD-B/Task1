@@ -3,6 +3,7 @@ import React from 'react'
 import Feather from 'react-native-vector-icons/Feather';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { name } from './../../node_modules/csso/node_modules/css-tree/lib/syntax/node/AtrulePrelude';
@@ -23,9 +24,10 @@ const HomeScreen = ({ navigation }) => {
             </View>
             <View style={styles.inputContainer}>
                 <TextInput style={styles.textInput}
-                    placeholder='search places'
+                    placeholder='Search places'
                     placeholderTextColor="#888888" />
                 <View style={styles.verticalLine} />
+                <FontAwesome6 name={"sliders"} size={28} color={"#888888aa"} marginRight={20} />
 
             </View>
             <View style={styles.PPCon}>
@@ -45,6 +47,9 @@ const HomeScreen = ({ navigation }) => {
             </View>
             <View style={styles.MFTimageContainer}>
                 <View style={styles.imageWrapper}>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate("BookFuji")}
+                    >
                     <ImageBackground
                         source={require("../assets/MFT.png")}
                         style={styles.MFTImage}
@@ -56,6 +61,7 @@ const HomeScreen = ({ navigation }) => {
                         </View>
 
                         <View style={styles.imgTextCon}>
+                            
                             <Text style={styles.title}>Mount Fuji, Tokyo</Text>
                             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <EvilIcons name={"location"} size={30} color={"#cac8c8"}
@@ -65,6 +71,8 @@ const HomeScreen = ({ navigation }) => {
                             </View>
                         </View>
                     </ImageBackground>
+                                        </TouchableOpacity>
+
                     <TouchableOpacity
                         onPress={() => navigation.navigate("Book")}
                     >
@@ -88,14 +96,23 @@ const HomeScreen = ({ navigation }) => {
                 </View>
             </View>
             <View style={styles.NavigationBarCon}>
-                <Entypo name={"home"} size={26} color={"#2f2f2f"} style={styles.homeIcon} />
+                <View style={{alignItems:"center"}}>
+                    <Entypo name={"home"} size={26} color={"#2f2f2f"} style={styles.homeIcon} />
+                    <View style={{
+                        width: 8,
+                        height: 8,
+                        backgroundColor: '#FF4A4A',
+                        borderRadius: 10,
+                        marginTop: 2
+                    }} />
+                </View>
                 <Feather name={"clock"} size={25} color={"#848282"} style={styles.homeIcon} />
                 <Fontisto name={"heart-alt"} size={23} color={"#848282"} style={styles.homeIcon} />
                 <FontAwesome name={"user-o"} size={25} color={"#848282"} style={styles.homeIcon} />
 
             </View>
 
-        </View>
+        </View >
     )
 }
 
@@ -162,7 +179,7 @@ const styles = StyleSheet.create({
         width: 2,                 // سمك الخط
         height: 30,               // ارتفاع الخط
         backgroundColor: '#D2D2D2', // لون الخط
-        marginRight: 60,
+        marginRight: 20,
     },
     textInput: { // مسؤول عن الكلام داخل السيرش بار
         flex: 1,
