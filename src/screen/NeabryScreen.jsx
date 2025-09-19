@@ -35,16 +35,14 @@ const HomeScreen = ({ navigation }) => {
                 <Text style={styles.ViewaAllText}> View all </Text>
             </View>
             <View style={styles.boxCon}>
-                <View style={styles.box1Con}>
-                    <Text style={styles.MVText}> Most Viewed </Text>
-                </View>
-                <TouchableOpacity onPress={() => navigation.navigate('Neabry')}>
-
+                <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                     <View style={styles.box2Con}>
-                        <Text style={styles.neabryText}> Neabry </Text>
+                        <Text style={styles.neabryText}> Most Viewed </Text>
                     </View>
                 </TouchableOpacity>
-
+                <View style={styles.box1Con}>
+                    <Text style={styles.MVText}> Neabry </Text>
+                </View>
                 <View style={styles.box3Con}>
                     <Text style={styles.latestext}> Latest </Text>
                 </View>
@@ -55,7 +53,7 @@ const HomeScreen = ({ navigation }) => {
                         onPress={() => navigation.navigate("BookFuji")}
                     >
                         <ImageBackground
-                            source={require("../assets/MFT.png")}
+                            source={require("../assets/Taif.png")}
                             style={styles.MFTImage}
                             imageStyle={{ borderRadius: 15 }}
 
@@ -66,11 +64,11 @@ const HomeScreen = ({ navigation }) => {
 
                             <View style={styles.imgTextCon}>
 
-                                <Text style={styles.title}>Mount Fuji, Tokyo</Text>
+                                <Text style={styles.title}>Al Hada Mountain</Text>
                                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                     <EvilIcons name={"location"} size={30} color={"#cac8c8"}
                                         style={styles.homeIcon} />
-                                    <Text style={styles.subtitle}>Tokyo, Japan          ⭐ 4.8</Text>
+                                    <Text style={styles.subtitle}>Taif          ⭐ 4.2</Text>
 
                                 </View>
                             </View>
@@ -81,17 +79,17 @@ const HomeScreen = ({ navigation }) => {
                         onPress={() => navigation.navigate("Book")}
                     >
                         <ImageBackground
-                            source={require("../assets/Andes.png")}
+                            source={require("../assets/Jeddah.png")}
                             style={styles.MFT2Image}
                             imageStyle={{ borderRadius: 15 }}
 
                         >
                             <View style={styles.imgTextCon}>
-                                <Text style={styles.title}>Andes, South</Text>
+                                <Text style={styles.title}>Jeddah Corniche</Text>
                                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                     <EvilIcons name={"location"} size={30} color={"#cac8c8"}
                                         style={styles.homeIcon} />
-                                    <Text style={styles.subtitle}>South, America          ⭐ 4.5</Text>
+                                    <Text style={styles.subtitle}>Jeddah          ⭐ 4.6</Text>
 
                                 </View>
                             </View>
