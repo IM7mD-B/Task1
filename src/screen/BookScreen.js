@@ -6,7 +6,7 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { name } from './../../node_modules/csso/node_modules/css-tree/lib/syntax/node/AtrulePrelude';
+import { name } from '../../node_modules/csso/node_modules/css-tree/lib/syntax/node/AtrulePrelude';
 
 
 const BookScreen = ({ navigation }) => { 
