@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View, TextInput, ImageBackground, Touchable, TouchableOpacity } from 'react-native'
+import { Image, StyleSheet, Text, View, TextInput, ImageBackground, Touchable, TouchableOpacity, Dimensions,ScrollView } from 'react-native'
 import React from 'react'
 import Feather from 'react-native-vector-icons/Feather';
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -7,10 +7,16 @@ import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { name } from './../../node_modules/csso/node_modules/css-tree/lib/syntax/node/AtrulePrelude';
+import { Fonts } from '../assets/fonts/fonts';
 
+const { width, height } = Dimensions.get("window");
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ paddingBottom: height * 0.1 }}
+            >
             <View style={styles.topContainer}>
                 <Text style={styles.HiText}>Hi, David 👋</Text>
                 <Image
@@ -27,7 +33,7 @@ const HomeScreen = ({ navigation }) => {
                     placeholder='Search places'
                     placeholderTextColor="#888888" />
                 <View style={styles.verticalLine} />
-                <FontAwesome6 name={"sliders"} size={28} color={"#888888aa"} marginRight={20} />
+                <FontAwesome6 name={"sliders"} size={width * 0.065} color={"#888888aa"} marginRight={20} />
 
             </View>
             <View style={styles.PPCon}>
@@ -61,14 +67,14 @@ const HomeScreen = ({ navigation }) => {
 
                         >
                             <View style={styles.imageIconCon}>
-                                <Fontisto name={"heart-alt"} size={18} color={"#ffffffff"} style={styles.imgeIcon} />
+                                <Fontisto name={"heart-alt"} size={width * 0.045} color={"#ffffffff"} style={styles.imgeIcon} />
                             </View>
 
                             <View style={styles.imgTextCon}>
 
                                 <Text style={styles.title}>Mount Fuji, Tokyo</Text>
                                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                                    <EvilIcons name={"location"} size={30} color={"#cac8c8"}
+                                    <EvilIcons name={"location"} size={width * 0.071} color={"#cac8c8"}
                                         style={styles.homeIcon} />
                                     <Text style={styles.subtitle}>Tokyo, Japan          ⭐ 4.8</Text>
 
@@ -89,7 +95,7 @@ const HomeScreen = ({ navigation }) => {
                             <View style={styles.imgTextCon}>
                                 <Text style={styles.title}>Andes, South</Text>
                                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                                    <EvilIcons name={"location"} size={30} color={"#cac8c8"}
+                                    <EvilIcons name={"location"} size={width * 0.071} color={"#cac8c8"}
                                         style={styles.homeIcon} />
                                     <Text style={styles.subtitle}>South, America          ⭐ 4.5</Text>
 
@@ -99,20 +105,21 @@ const HomeScreen = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
             </View>
+               </ScrollView>
             <View style={styles.NavigationBarCon}>
                 <View style={{ alignItems: "center" }}>
-                    <Entypo name={"home"} size={26} color={"#2f2f2f"} style={styles.homeIcon} />
+                    <Entypo name={"home"} size={width * 0.064} color={"#2f2f2f"} style={styles.homeIcon} />
                     <View style={{
-                        width: 8,
-                        height: 8,
+                        width: width * 0.02,
+                        height: height * 0.01,
                         backgroundColor: '#FF4A4A',
                         borderRadius: 10,
-                        marginTop: 2
+                        marginTop: height * 0.001
                     }} />
                 </View>
-                <Feather name={"clock"} size={25} color={"#848282"} style={styles.homeIcon} />
-                <Fontisto name={"heart-alt"} size={23} color={"#848282"} style={styles.homeIcon} />
-                <FontAwesome name={"user-o"} size={25} color={"#848282"} style={styles.homeIcon} />
+                <Feather name={"clock"} size={width * 0.063} color={"#848282"} style={styles.homeIcon} />
+                <Fontisto name={"heart-alt"} size={width * 0.06} color={"#848282"} style={styles.homeIcon} />
+                <FontAwesome name={"user-o"} size={width * 0.063} color={"#848282"} style={styles.homeIcon} />
 
             </View>
 
@@ -128,9 +135,10 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     topContainer: { // مسؤول عن الحاويه الي فوق تحتوي على النص والصوره
-        height: 75,
-        width: "100%",
+        height: height * 0.08,
+        width: width * 1,
         flexDirection: "row",
+
 
         //  flexDirection:"row" وضيفتها تزبط اتجاه الاشياء جوه الحاويه جمب بعض يمين مع عكس الاشياء او يسار او تحت مع عكس الاشياء او فوق
         //  justifyContent: للتحكم في الاتجهات بدون عكس العناصر وايضا المسافات
@@ -144,62 +152,66 @@ const styles = StyleSheet.create({
         //  flexGrow  يخلي العنصر ياخذ كل المساحه الفاضيه 
     },
     DavidImage: { // مسؤول عن الصوره
-        width: 50,
-        height: 50,
+        width: width * 0.12,
+        height: height * 0.055,
         alignSelf: 'flex-end',
         borderRadius: 75,
-        marginLeft: 150,
+        marginLeft: width * 0.36,
+
     },
 
     HiText: { //مسؤول عن نص الترحيب
-        fontSize: 30,
-        fontWeight: "bold",// imagebackground
+        fontSize: width * 0.073,
         color: "#2f2f2f",
-        marginLeft: 20,
-        marginTop: 30,
+        marginLeft: width * 0.05,
+        marginTop: height * 0.024,
+        fontFamily: Fonts.iBMBold
+
     },
     ExCon: { // مسؤول عن حاويه النص الثاني
-        height: 24,
-        width: 200,
+        height: height * 0.029,
+        width: width * 1,
+
     },
     ExText: { // مسؤول عن النص الثاني
-        fontSize: 20,
+        fontSize: width * 0.049,
         color: "#888888",
-        marginLeft: 20,
-        fontWeight: "500"
+        marginLeft: width * 0.05,
+        fontWeight: "500",
+        fontFamily: Fonts.iBMPLight
     },
     inputContainer: { // مسؤول عن حاويه السيرش بار 
         backgroundColor: "#FFFFFF",
         flexDirection: "row",
         borderRadius: 20,
-        marginHorizontal: 30,
-        marginTop: 40,
+        marginHorizontal: width * 0.07,
+        marginTop: height * 0.03,
         alignItems: "center",
-        height: 58,
+        height: height * 0.069,
         borderWidth: 2,
         borderColor: "#D2D2D2"
     },
     verticalLine: {
-        width: 2,                 // سمك الخط
-        height: 30,               // ارتفاع الخط
+        width: width * 0.004,                 // سمك الخط
+        height: height * 0.04,               // ارتفاع الخط
         backgroundColor: '#D2D2D2', // لون الخط
-        marginRight: 20,
+        marginRight: width * 0.05,
     },
     textInput: { // مسؤول عن الكلام داخل السيرش بار
         flex: 1,
-        fontSize: 16,
+        fontSize: width * 0.04,
         fontWeight: "500",
-        marginLeft: 25,
+        marginLeft: width * 0.06,
     },
     PPCon: { // مسؤول عن النص والفيو 
         flexDirection: "row",
-        marginLeft: 20,
-        marginRight: 20,
-        marginTop: 40,
+        marginLeft: width * 0.05,
+        marginRight: width * 0.05,
+        marginTop: height * 0.05,
 
     },
     PPText: { // مسؤول عن العنوان
-        fontSize: 20,
+        fontSize: width * 0.049,
         alignSelf: "center",
         fontWeight: "bold",
         color: "#2f2f2f"
@@ -207,71 +219,71 @@ const styles = StyleSheet.create({
     ViewaAllText: { // مسؤول عن الفيو 
         marginLeft: 'auto',
         alignSelf: "center",
-        fontSize: 16,
+        fontSize: width * 0.04,
         color: "#888888",
         fontWeight: "bold"
     },
     boxCon: {
         flexDirection: "row",
         justifyContent: "space-between",
-        marginLeft: 20,
-        marginTop: 30,
-        marginTop: 40,
+        marginLeft: width * 0.05,
+        marginTop: height * 0.05,
 
     },
     box1Con: {
-        height: 54,
+        height: height * 0.059,
         justifyContent: 'center', // لمحاذاة عمودية
         alignItems: 'center',     // لمحاذاة أفقية
-        width: 136,
+        width: width * 0.36,
         borderRadius: 20,
         backgroundColor: "#2f2f2f"
     },
     MVText: {
         color: "#ffffff",
-        fontSize: 16,
+        fontSize: width * 0.04,
         fontWeight: "bold"
     },
     box2Con: {
-        height: 54,
+        height: height * 0.059,
         justifyContent: 'center', // لمحاذاة عمودية
         alignItems: 'center',     // لمحاذاة أفقية
-        width: 105,
+        width: width * 0.28,
         borderRadius: 20,
         backgroundColor: "#fbfbfb"
     },
     neabryText: {
         color: "#c5c5c5",
-        fontSize: 16,
+        fontSize: width * 0.04,
         fontWeight: "bold"
     },
     box3Con: {
-        height: 54,
+        height: height * 0.059,
         justifyContent: 'center', // لمحاذاة عمودية
         alignItems: 'center',     // لمحاذاة أفقية
-        width: 111,
+        width: width * 0.28,
         borderRadius: 20,
         backgroundColor: "#fbfbfb"
     },
     latestext: {
         color: "#c5c5c5",
-        fontSize: 16,
+        fontSize: width * 0.04,
         fontWeight: "bold"
     },
     MFTimageContainer: {
-        height: 120,       // نفس ارتفاع الصورة
-        width: '100%',     // يغطي العرض بالكامل
-        marginTop: 20,
+        height: height * 0.442,       // نفس ارتفاع الصورة
+        width: width * 1,     // يغطي العرض بالكامل
+        marginTop: height * 0.05,
+
     },
     MFTImage: {
-        width: 270,
-        height: 405,
-        marginHorizontal: 20,
+        width: width * 0.66,
+        height: height * 0.442,
+        marginHorizontal: width * 0.05,
         justifyContent: "flex-end"
     },
     MFT2Image: {
-        width: 270,
-        height: 405,
+        width: width * 0.66,
+        height: height * 0.442,
         justifyContent: "flex-end"
     },
     imageWrapper: {
@@ -281,20 +293,22 @@ const styles = StyleSheet.create({
     },
     NavigationBarCon: {
         position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0,
+        bottom: height * 0,
+        left: width * 0,
+        right: width * 0,
         flexDirection: "row",
         justifyContent: "space-around",
         alignItems: "center",
-        height: 60,
+        paddingBottom: height * 0.005,
+        height: height * 0.07,
+
     },
     imgTextCon: {
         borderRadius: 15,
-        height: 75,
-        marginHorizontal: 25,
-        marginVertical: 20,
-        padding: 10,
+        height: height * 0.09,
+        marginHorizontal: width * 0.07,
+        marginVertical: height * 0.027,
+        padding: width * 0.025,
         gap: 10,
         backgroundColor: "rgba(29,29,29,0.4)", // الشفافية: 0.3 = 30%
 
@@ -307,9 +321,9 @@ const styles = StyleSheet.create({
     },
     imageIconCon: {
         position: 'absolute', // مهم: ثابت بالنسبة للصورة
-        top: 10,              // 10 بكسل من أعلى الصورة
-        right: 10,            // 10 بكسل من يمين الصورة
-        padding: 10,
+        top: height * 0.02,              // 10 بكسل من أعلى الصورة
+        right: width * 0.02,            // 10 بكسل من يمين الصورة
+        padding: width * 0.025,
         borderRadius: 20,
         backgroundColor: 'rgba(29,29,29,0.4)',
     },

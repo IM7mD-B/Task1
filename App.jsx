@@ -4,10 +4,10 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-import HomeScreen from "./src/screen/HomeScreen.jsx";
-import BookScreen from "./src/screen/BookScreen.jsx";
-import BookFujiScreen from "./src/screen/BookFujiScreen.jsx";
-import NeabryScreen from "./src/screen/NeabryScreen.jsx";
+import HomeScreen from "./src/screen/HomeScreen.js";
+import BookScreen from "./src/screen/BookScreen.js";
+import BookFujiScreen from "./src/screen/BookFujiScreen.js";
+import NeabryScreen from "./src/screen/NeabryScreen.js";
 
 
 

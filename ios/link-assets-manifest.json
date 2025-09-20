@@ -1,0 +1,61 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-Bold.ttf",
+      "sha1": "106cd1a7059e4b5e2f08cdf925dfd14128a34324"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-BoldItalic.ttf",
+      "sha1": "72771f7b6803f122092619586f49f77e3ddaf937"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-ExtraLight.ttf",
+      "sha1": "1740b6e1d874a388f0488a9fe57fd6d0cf590855"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-ExtraLightItalic.ttf",
+      "sha1": "fe34d6fa24f3697943e1f16d850f29927c1543b3"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-Italic.ttf",
+      "sha1": "0c534fa0f1ccb4427bc8754077b918a5c71be1b4"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-Light.ttf",
+      "sha1": "0821b05cfa8f3c6de22fac432699a1ef3bdcf0e8"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-LightItalic.ttf",
+      "sha1": "8a816894a7f56f4d1b0f4988c1e057ad182203d5"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-Medium.ttf",
+      "sha1": "0c3d126d980aeda03b0d58056f0b72e1152a74d4"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-MediumItalic.ttf",
+      "sha1": "1d6ecf01dc1a6f47be69478076c31a4ea697eff7"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-Regular.ttf",
+      "sha1": "1b3dc458e12cfd039f2fc05614478620cf35ea5e"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-SemiBold.ttf",
+      "sha1": "63cdefc43479162efe53a1aa1a71b8eab6870436"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-SemiBoldItalic.ttf",
+      "sha1": "919a364acd28aa090c8544766a20073e8f1cd0d8"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-Thin.ttf",
+      "sha1": "13fc9c9adf7ab2073f162ddd1cd46d51909ab1cf"
+    },
+    {
+      "path": "src/assets/fonts/IBMPlexSerif-ThinItalic.ttf",
+      "sha1": "361c49472a160fd388474191e8be9418f63108fb"
+    }
+  ]
+}
