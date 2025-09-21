@@ -8,6 +8,7 @@ import HomeScreen from "./src/screen/HomeScreen.js";
 import BookScreen from "./src/screen/BookScreen.js";
 import BookFujiScreen from "./src/screen/BookFujiScreen.js";
 import NeabryScreen from "./src/screen/NeabryScreen.js";
+import SplashScreen from "./src/screen/SplashScreen.js";
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
         headerShown: false,
       }}  
       >
+        <Stack.Screen name="Splash" component={SplashScreen}/>
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="Neabry" component={NeabryScreen}/>
         <Stack.Screen name="Book" component={BookScreen}/>
