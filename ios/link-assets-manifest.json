@@ -2,6 +2,10 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "src/assets/fonts/fonts.ts",
+      "sha1": "26ea7b68a5f8fdeb0353faa7b09c18f4cd5df030"
+    },
+    {
       "path": "src/assets/fonts/IBMPlexSerif-Bold.ttf",
       "sha1": "106cd1a7059e4b5e2f08cdf925dfd14128a34324"
     },
@@ -56,6 +60,10 @@
     {
       "path": "src/assets/fonts/IBMPlexSerif-ThinItalic.ttf",
       "sha1": "361c49472a160fd388474191e8be9418f63108fb"
+    },
+    {
+      "path": "src/assets/fonts/Lobster.ttf",
+      "sha1": "120c751cd7a77174037c2409ab883ef7efc5edbb"
     }
   ]
 }
