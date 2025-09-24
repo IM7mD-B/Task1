@@ -3,11 +3,13 @@ import React from 'react'
 import Feather from 'react-native-vector-icons/Feather';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { name } from './../../node_modules/csso/node_modules/css-tree/lib/syntax/node/AtrulePrelude';
 import { Fonts } from '../assets/fonts/fonts';
+import Setting from '../assets/icon/Setting.svg';
+import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
+
 
 const { width, height } = Dimensions.get("window");
 const HomeScreen = ({ navigation }) => {
@@ -33,7 +35,7 @@ const HomeScreen = ({ navigation }) => {
                     placeholder='Search places'
                     placeholderTextColor="#888888" />
                 <View style={styles.verticalLine} />
-                <FontAwesome6 name={"sliders"} size={width * 0.065} color={"#888888aa"} marginRight={20} />
+                <Setting  size={width * 0.065} color={"#888888aa"} marginRight={20} />
 
             </View>
             <View style={styles.PPCon}>
