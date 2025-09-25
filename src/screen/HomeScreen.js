@@ -1,11 +1,10 @@
-import { Image, StyleSheet, Text, View, TextInput, ImageBackground, Touchable, TouchableOpacity, Dimensions,ScrollView } from 'react-native'
+import { Image, StyleSheet, Text, View, TextInput, ImageBackground, Touchable, TouchableOpacity, Dimensions, ScrollView } from 'react-native'
 import React from 'react'
 import Feather from 'react-native-vector-icons/Feather';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
-import { name } from './../../node_modules/csso/node_modules/css-tree/lib/syntax/node/AtrulePrelude';
 import { Fonts } from '../assets/fonts/fonts';
 import Setting from '../assets/icon/Setting.svg';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
@@ -19,49 +18,96 @@ const HomeScreen = ({ navigation }) => {
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{ paddingBottom: height * 0.1 }}
             >
-            <View style={styles.topContainer}>
-                <Text style={styles.HiText}>Hi, David 👋</Text>
-                <Image
-                    source={require("../assets/David.png")}
-                    style={styles.DavidImage}
-                />
-            </View>
-
-            <View style={styles.ExCon}>
-                <Text style={styles.ExText}>Explore the world</Text>
-            </View>
-            <View style={styles.inputContainer}>
-                <TextInput style={styles.textInput}
-                    placeholder='Search places'
-                    placeholderTextColor="#888888" />
-                <View style={styles.verticalLine} />
-                <Setting  size={width * 0.065} color={"#888888aa"} marginRight={20} />
-
-            </View>
-            <View style={styles.PPCon}>
-                <Text style={styles.PPText}> Populer Places</Text>
-                <Text style={styles.ViewaAllText}> View all </Text>
-            </View>
-            <View style={styles.boxCon}>
-                <View style={styles.box1Con}>
-                    <Text style={styles.MVText}> Most Viewed </Text>
+                <View style={styles.topContainer}>
+                    <Text style={styles.HiText}>Hi, David 👋</Text>
+                    <Image
+                        source={require("../assets/David.png")}
+                        style={styles.DavidImage}
+                    />
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate('Neabry')}>
 
-                    <View style={styles.box2Con}>
-                        <Text style={styles.neabryText}> Neabry </Text>
+                <View style={styles.ExCon}>
+                    <Text style={styles.ExText}>Explore the world</Text>
+                </View>
+                <View style={styles.inputContainer}>
+                    <TextInput style={styles.textInput}
+                        placeholder='Search places'
+                        placeholderTextColor="#888888" />
+                    <View style={styles.verticalLine} />
+                    <Setting size={width * 0.065} color={"#888888aa"} marginRight={20} />
+
+                </View>
+                <View style={styles.PPCon}>
+                    <Text style={styles.PPText}> Populer Places</Text>
+                    <Text style={styles.ViewaAllText}> View all </Text>
+                </View>
+                <View style={styles.boxCon}>
+                    <View style={styles.box1Con}>
+                        <Text style={styles.MVText}> Most Viewed </Text>
                     </View>
-                </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Neabry')}>
 
-                <View style={styles.box3Con}>
-                    <Text style={styles.latestext}> Latest </Text>
+                        <View style={styles.box2Con}>
+                            <Text style={styles.neabryText}> Neabry </Text>
+                        </View>
+                    </TouchableOpacity>
+
+                    <View style={styles.box3Con}>
+                        <Text style={styles.latestext}> Latest </Text>
+                    </View>
                 </View>
-            </View>
-            <View style={styles.MFTimageContainer}>
-                <View style={styles.imageWrapper}>
-                    <TouchableOpacity
-                        onPress={() => navigation.navigate("BookFuji")}
+                <View style={styles.MFTimageContainer}>
+                    <ScrollView
+                        horizontal // يخلي السكرول من اليمين لليسار بدل فوق لتحت
+                        showsHorizontalScrollIndicator={false}  // في شريط يطلع يبين لمن تحرك يمين ويسار هذا الامر يخفيه  
+                        contentContainerStyle={{ paddingHorizontal: scale(10) }} // يسوي مسافه من اليمين ويسار بحيث ان العناصر ما تلصق في الشاشه 
                     >
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate("BookFuji")}
+                        >
+                            <ImageBackground
+                                source={require("../assets/MFT.png")}
+                                style={styles.MFTImage}
+                                imageStyle={{ borderRadius: 15 }}
+
+                            >
+                                <View style={styles.imageIconCon}>
+                                    <Fontisto name={"heart-alt"} size={width * 0.045} color={"#ffffffff"} style={styles.imgeIcon} />
+                                </View>
+
+                                <View style={styles.imgTextCon}>
+
+                                    <Text style={styles.title}>Mount Fuji, Tokyo</Text>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                                        <EvilIcons name={"location"} size={width * 0.071} color={"#cac8c8"}
+                                            style={styles.homeIcon} />
+                                        <Text style={styles.subtitle}>Tokyo, Japan          ⭐ 4.8</Text>
+
+                                    </View>
+                                </View>
+                            </ImageBackground>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate("Book")}
+                        >
+                            <ImageBackground
+                                source={require("../assets/Andes.png")}
+                                style={styles.MFT2Image}
+                                imageStyle={{ borderRadius: 15 }}
+
+                            >
+                                <View style={styles.imgTextCon}>
+                                    <Text style={styles.title}>Andes, South</Text>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                                        <EvilIcons name={"location"} size={width * 0.071} color={"#cac8c8"}
+                                            style={styles.homeIcon} />
+                                        <Text style={styles.subtitle}>South, America          ⭐ 4.5</Text>
+
+                                    </View>
+                                </View>
+                            </ImageBackground>
+                        </TouchableOpacity>
                         <ImageBackground
                             source={require("../assets/MFT.png")}
                             style={styles.MFTImage}
@@ -83,11 +129,6 @@ const HomeScreen = ({ navigation }) => {
                                 </View>
                             </View>
                         </ImageBackground>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        onPress={() => navigation.navigate("Book")}
-                    >
                         <ImageBackground
                             source={require("../assets/Andes.png")}
                             style={styles.MFT2Image}
@@ -104,10 +145,10 @@ const HomeScreen = ({ navigation }) => {
                                 </View>
                             </View>
                         </ImageBackground>
-                    </TouchableOpacity>
+
+                    </ScrollView>
                 </View>
-            </View>
-               </ScrollView>
+            </ScrollView >
             <View style={styles.NavigationBarCon}>
                 <View style={{ alignItems: "center" }}>
                     <Entypo name={"home"} size={width * 0.064} color={"#2f2f2f"} style={styles.homeIcon} />
